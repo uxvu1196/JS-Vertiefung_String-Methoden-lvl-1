@@ -138,10 +138,6 @@ Verwende den Befehl substr() um die gewünschten Zeichenketten zu erhalten.
 let text = “Sam is working at coding school”;
 
 Zeige mit Hilfe der Methode "substr" diese Ausgabe in einem HTML-Dokument an:
-Sam
-is 
-at school
-Sam works at school
 
 Speichere jedes Ergebnis in einer Variablen und verwende document.write(let+"<br>"), um das Ergebnis anzuzeigen.
  */
@@ -149,14 +145,21 @@ Speichere jedes Ergebnis in einer Variablen und verwende document.write(let+"<br
 document.write("------------ <br>")
 let text2 = "Sam is working at coding school";
 
+//Sam
 myVar = text2.substr(0,3)
 document.write(myVar+"<br>")
 // der erster Parameter zeigt an wo ich starten will und der zweite wie viele Zeichen ich möchte 
 
+//is
 myVar = text2.substr(4,2)
 document.write(myVar+"<br>")
 
+//at school
 myVar = text2.substr(15,2) + text2.substr(24,7)
+document.write(myVar+"<br>")
+
+//Sam works at school
+myVar = text2.substr(0,3) + text2.substr(6,5) + text2.substr(5,1) + text2.substr(14,3) + text2.substr(24,7)
 document.write(myVar+"<br>")
 // FRAGEN !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -200,31 +203,29 @@ let text = “Sam is going to coding school”;
 
 Erzeuge mit den Methoden "toLowerCase-toUpperCase" diese Ausgabe in einem HTML-Dokument. Nutze alle Methoden die du bereits gelernt hast.
 
-SAM IS GOING TO SCHOOL
-sam is going at school 
-SAM is going to SCHOOL
-sam IS GOING TO school
-Sam Is Going To School
-
 Speichere jedes Ergebnis in einer Variablen und verwende document.write(let+"<br"), um das Ergebnis anzuzeigen.
 */
 
 let text4 = "Sam is going to coding school";
 
+//SAM IS GOING TO SCHOOL
 myVar = text4.replace("coding", " ").toUpperCase() 
 document.write(myVar+"<br>")
 
+//sam is going at school
 myVar = text4.replace("coding", " ").toLowerCase() 
 document.write(myVar+"<br>")
 
+//SAM is going to SCHOOL
 myVar = text4.substr(0,3).toUpperCase() + text4.substr(3,12).toLowerCase() + text4.substr(-7,7).toUpperCase().replace("coding", " ")
 document.write(myVar+"<br>")
 // 22 ätte auch geklappt beim letzten
 
-
+//sam IS GOING TO school
 myVar = text4.substr(0,3).toLowerCase() + text4.substr(3,12).toUpperCase() + text4.substr(-7,7).toLowerCase().replace("coding", " ")
 document.write(myVar+"<br>")
 
+//Sam Is Going To School
 myVar = text4.substr(0,3).toUpperCase() + text4.substr(3,12).toLowerCase() + text4.substr(-7,7).toUpperCase().replace("coding", " ")
 document.write(myVar+"<br>")
 
